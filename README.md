@@ -1,5 +1,5 @@
-# ToDo list con Reactjs
+# ToDo list con Reactjs y Picnicss
 
-## link: https://dreamy-minsky-045cb7.netlify.app/
+## link: https://cosas-por-hacer.netlify.app/
 
 ![alt text](./img.jpg)
