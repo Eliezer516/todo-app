@@ -1,0 +1,29 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	li{
+		list-style: none;
+	}
+}
+body{
+	background: #3390E1;
+}
+.container{
+	width: 40%;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.agregar{
+	width: 100%;
+}
+
+@media (max-width: 700px) {
+	.container{
+		width: 100%;
+		h1{
+			font-size: 30px;
+		}
+	}
+}
