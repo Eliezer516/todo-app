@@ -1,8 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 import {v4} from 'uuid'
 import './main.scss'
 
 export function App(){
+
+	const [parent, enableAnimations] = useAutoAnimate()
 
 	const [todo, setTodo] = useState([])
 
@@ -19,7 +22,8 @@ export function App(){
 		localStorage.setItem('todoApp.todo', JSON.stringify(todo))
 	}, [todo])
 
-	const agregarTarea = () => {
+	const agregarTarea = (e) => {
+		e.preventDefault()
 		const tarea = textoTarea.current.value;
 
 		if(tarea === '') return
@@ -46,9 +50,11 @@ export function App(){
 				<h1>Total de tareas: {todo.filter((todos) => !todos.completado).length}</h1>
 			</header>
 			<footer>
-				<input ref={textoTarea} type="text" placeholder="ingresa una tarea" />
-				<button className="agregar" onClick={() => agregarTarea()} >Agregar＋</button>
-				<ul>
+				<form onSubmit={agregarTarea}>
+					<input ref={textoTarea} type="text" placeholder="ingresa una tarea" />
+					<button className="agregar" onClick={() => agregarTarea()} >Agregar＋</button>
+				</form>
+				<ul ref={parent}>
 					{todo.map(todos => (
 						<li key={todos.id}>
 							<label>

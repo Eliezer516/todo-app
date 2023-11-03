@@ -3,18 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/index.html"
+    "dev": "vite",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@formkit/auto-animate": "^0.8.0",
+    "@vitejs/plugin-react": "^4.1.1",
     "componentes": "^0.0.10",
     "react": "17.0.2",
     "react-dom": "^17.0.2",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "vite": "^4.5.0"
   },
   "devDependencies": {
     "sass": "^1.34.0"
